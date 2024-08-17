@@ -15,7 +15,7 @@ const Launcher = () => {
       try {
         const response = await axios.post(`https://ezeebe.onrender.com/apps/launcher/${id}`, {
           appPath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-          param: `https://${appname}.com`
+          param: `${appname}`+".com"
         });
         console.log('App launched successfully:', response.data);
         setLoading(false); // Set loading to false after successful fetch
