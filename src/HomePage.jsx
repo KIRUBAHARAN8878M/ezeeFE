@@ -39,12 +39,11 @@ const HomePage = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
-        // opacity:"90%"
       }}
     >
-      <div className="flex h-screen">
+      <div className="flex flex-col lg:flex-row h-screen">
         {/* Sidebar */}
-        <div className="bg-transparent-900 w-64 p-4 text-white flex flex-col justify-between">
+        <div className="bg-transparent-900 w-full lg:w-64 p-4 text-white flex flex-col justify-between">
           <div className="mb-8">
             <p className="text-2xl font-light">OpEzee</p>
           </div>
@@ -56,23 +55,22 @@ const HomePage = () => {
         </div>
 
         {/* Content Section */}
-        <div className="flex-1 overflow-y-auto p-8">
+        <div className="flex-1 overflow-y-auto p-4 lg:p-8">
           <h1 className="text-3xl font-thin mb-4 text-white">Apps</h1>
-          <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
             {apps.map((app) => (
               <div
                 key={app._id}
                 className="cursor-pointer p-4 rounded-md bg-white bg-opacity-10"
               >
-               <a  href ={`https://${app.name}.com`} target="_blank">
-               <img
-                  src={app.icon}
-                  alt={app.name}
-                 
-                  className="w-full h-12 object-contain mb-4 rounded-md"
-                  onClick={() => handleIconClick(app._id, app.name)}
-                />
-               </a>
+                <a href={`https://${app.name}.com`} target="_blank">
+                  <img
+                    src={app.icon}
+                    alt={app.name}
+                    className="w-full h-12 object-contain mb-4 rounded-md"
+                    onClick={() => handleIconClick(app._id, app.name)}
+                  />
+                </a>
                 <p
                   className="text-lg text-white font-light text-center"
                   onClick={() => handleAppClick(app._id)}
