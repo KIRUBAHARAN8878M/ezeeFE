@@ -18,7 +18,7 @@ const Configuration = () => {
     const fetchAppDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/apps/get/${id}`
+          `https://ezee-be.vercel.app/apps/get/${id}`
         );
         setAppDetails(response.data);
         setName(response.data.name);
@@ -47,7 +47,7 @@ const Configuration = () => {
       }
 
       await axios.put(
-        `http://localhost:5000/apps/update/${id}`,
+        `https://ezee-be.vercel.app/apps/update/${id}`,
         formData
       );
 
@@ -61,7 +61,7 @@ const Configuration = () => {
   const handleDeleteClick = async () => {
     try {
       await axios.delete(
-        `http://localhost:5000/apps/delete/${id}`
+        `https://ezee-be.vercel.app/apps/delete/${id}`
       );
 
       // Navigate back to the homepage after successful delete

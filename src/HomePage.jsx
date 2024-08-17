@@ -13,7 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/apps/get");
+        const response = await axios.get("https://ezee-be.vercel.app/apps/get");
         setApps(response.data);
       } catch (error) {
         console.error("Error fetching data:", error.message);

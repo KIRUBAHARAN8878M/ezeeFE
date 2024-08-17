@@ -13,7 +13,7 @@ const Launcher = () => {
   useEffect(() => {
     const fetchAppDetails = async () => {
       try {
-        const response = await axios.post(`http://localhost:5000/apps/launcher/${id}`, {
+        const response = await axios.post(`https://ezee-be.vercel.app/apps/launcher/${id}`, {
           appPath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
           param: `${appname}`+".com"
         });
