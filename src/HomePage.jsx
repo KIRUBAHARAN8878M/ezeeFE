@@ -64,7 +64,7 @@ const HomePage = () => {
                 key={app._id}
                 className="cursor-pointer p-4 rounded-md bg-white bg-opacity-10"
               >
-               <a  href ={`https://${app.name}.com`}>
+               <a  href ={`https://${app.name}.com`} target="_blank">
                <img
                   src={app.icon}
                   alt={app.name}
