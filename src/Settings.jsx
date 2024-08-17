@@ -33,7 +33,7 @@ const Settings = () => {
       formData.append("icon", image);
 
       await axios.post(
-        "https://ezee-be.vercel.app/apps/create",
+        "https://ezeebe.onrender.com/apps/create",
         formData
       );
 
