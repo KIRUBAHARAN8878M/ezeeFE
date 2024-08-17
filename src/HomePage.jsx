@@ -64,13 +64,15 @@ const HomePage = () => {
                 key={app._id}
                 className="cursor-pointer p-4 rounded-md bg-white bg-opacity-10"
               >
-                <img
+               <a  href ={`https://${app.name}.com`}>
+               <img
                   src={app.icon}
                   alt={app.name}
-                  href ={`https://${app.name}.com`}
+                 
                   className="w-full h-12 object-contain mb-4 rounded-md"
                   onClick={() => handleIconClick(app._id, app.name)}
                 />
+               </a>
                 <p
                   className="text-lg text-white font-light text-center"
                   onClick={() => handleAppClick(app._id)}
