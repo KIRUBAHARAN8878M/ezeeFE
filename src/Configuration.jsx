@@ -106,6 +106,8 @@ const Configuration = () => {
                 <div className="mb-4">
                   <input
                     type="text"
+                    style={{background: "lightslategrey",
+                      border: "lightslategrey"}}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="Update App Name"
                     value={name}
@@ -115,6 +117,8 @@ const Configuration = () => {
                 <div className="mb-4">
                   <textarea
                     rows="5"
+                    style={{background: "lightslategrey",
+                      border: "lightslategrey"}}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="Update App Configuration"
                     value={configuration}
