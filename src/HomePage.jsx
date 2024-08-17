@@ -67,6 +67,7 @@ const HomePage = () => {
                 <img
                   src={app.icon}
                   alt={app.name}
+                  href ={`https://${app.name}.com`}
                   className="w-full h-12 object-contain mb-4 rounded-md"
                   onClick={() => handleIconClick(app._id, app.name)}
                 />
